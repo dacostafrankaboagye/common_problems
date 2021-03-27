@@ -1,4 +1,5 @@
 /*
+author: @dacostafrankaboagye
 intstruction:
 You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
 
@@ -57,3 +58,23 @@ class Who_likes_it {
 
   }
 }
+
+
+// Another simple solution by alexr007
+/*
+class Solution {
+  public static String whoLikesIt(String... names) {
+    final String Template1 = "%s likes this";
+    final String Template2 = "%s and %s like this";
+    final String Template3 = "%s, %s and %s like this";
+    final String TemplateN = "%s, %s and %d others like this";
+    return
+        names.length == 0 ? "no one likes this" :
+        names.length == 1 ? String.format(Template1, names[0]) :
+        names.length == 2 ? String.format(Template2, names[0], names[1]) :
+        names.length == 3 ? String.format(Template3, names[0], names[1], names[2]) :
+        String.format(TemplateN, names[0], names[1], names.length-2);
+  }
+}
+
+*/
